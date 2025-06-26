@@ -5,11 +5,19 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "backend-kasir",
-	"main": "src/index.ts",
+	"main": "src/index.js",
 	"compatibility_date": "2025-06-20",
 	"observability": {
 		"enabled": true
-	}
+	},
+	//menyambungkana ke database di cloudflare
+	"d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "kasir", //nama databse
+      "database_id": "141bac95-1f0d-482b-916e-e462cbf6c1d0" //id databse
+    }
+  ]
 	/**
 	 * Smart Placement
 	 * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
